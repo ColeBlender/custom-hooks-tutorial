@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import useLocalStorageState from "@/hooks/useLocalStorageState";
 
 function HomePage() {
-  const [text, setText] = useState("");
+  const [text, setText] = useLocalStorageState("", "text");
 
   return (
     <div className="w-full min-h-screen flex flex-col items-center">
